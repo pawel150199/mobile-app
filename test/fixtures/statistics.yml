@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  pointer: false
+  answer: one
+  question: one
+  user: one
+
+two:
+  pointer: false
+  answer: two
+  question: two
+  user: two
