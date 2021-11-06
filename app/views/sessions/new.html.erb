@@ -1,0 +1,35 @@
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Strona logowania </title>
+
+<style>
+h1 {
+    color: white;
+    font-size: 50px;
+}
+body {
+    margin-top: 45vw;
+    margin-left: 40vw;
+    background-image: url(<%= asset_path "tlo2.jpg" %>);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+f{
+    color:white;
+}
+
+</style>
+</head>
+
+<body>
+<h1>Logowanie</h1>
+<%= form_for(:session, url: login_path) do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username, class: 'form-control' %>
+  <%= f.label :password %>
+  <%= f.password_field :password, class: 'form-control' %>
+  <%= f.submit "Zaloguj" %>
+<% end %>
+
+</body>
