@@ -8,9 +8,41 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <style>
+    body {
+      background-color: back;
+    }
+    ul {
+      margin-top: 35vw;
+      margin-left: 45vw;
+    }
+    li {
+      color: white
+      text-decoration: none;
+      margin-top: 2vw;
+
+    }
+    a:link {
+      text-decoration: none;
+    }
+    a:visited{
+      text-decoration: none;
+    }
+    </style>
+    </head>
 
   <body>
     <%= yield %>
+
+<ul>
+  <li><%= link_to "Uzytkownicy", users_path %></li>
+  <li><%= link_to "Statystyki", statistics_path %></li>
+  <% if logged_in? %>
+    <li><%= link_to current_student.name, current_student %></li>
+    <li><%= link_to "Wyloguj", logout_path, method: :delete %></li>
+  <% else %>
+    <li><%= link_to "Zaloguj", login_path %></li>
+  <% end %>
+</ul>
   </body>
 </html>

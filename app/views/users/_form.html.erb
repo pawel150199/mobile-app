@@ -1,3 +1,14 @@
+<head>
+<style>
+  body {
+    margin-top: 25vw;
+    margin-left: 40vw;
+    
+  }
+</style>
+</head>
+
+<body>
 <%= form_with(model: user) do |form| %>
   <% if user.errors.any? %>
     <div id="error_explanation">
@@ -16,12 +27,17 @@
     <%= form.text_field :username %>
   </div>
 
-  <div class="field">
-    <%= form.label :last_score %>
-    <%= form.number_field :last_score %>
-  </div>
+<div class="field">
+  <%= form.label :password %>
+  <%= form.password_field :password, id: :user_password %>
+</div>
 
-  <div class="actions">
+<div class="field">
+  <%= form.label :password_confirmation %>
+  <%= form.password_field :password_confirmation, id: :user_password_confirmation %>
+</div>
+<div class="actions">
     <%= form.submit %>
-  </div>
+</div>
 <% end %>
+</body>
