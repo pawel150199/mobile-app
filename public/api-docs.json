@@ -1,0 +1,16 @@
+{
+  "apiVersion": "2.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "apis": [
+    {
+      "path": "/users.{format}",
+      "description": "Users"
+    }
+  ],
+  "authorizations": null,
+  "info": {
+    "title": "Student forum",
+    "description": "Example rails app"
+  }
+}
