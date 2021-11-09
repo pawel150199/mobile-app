@@ -1,7 +1,14 @@
 class SessionsController < ApplicationController
+  swagger_controller :sessions, 'Sessions'
+
+
   def new
   end
 
+  swagger_api :create do
+    summary 'Login to user'
+    notes 'Notes...'
+  end
   def create
     user = User.find_by(username: params[:session][:username])
     if user && user.authenticate(params[:session][:password])
@@ -12,7 +19,11 @@ class SessionsController < ApplicationController
       render 'new'
     end
   end
-  
+
+  swagger_api :destroy do
+    summary 'Logout'
+    notes 'Notes...'
+  end
   def destroy
     log_out
     redirect_to root_url

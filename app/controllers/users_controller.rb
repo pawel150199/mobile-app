@@ -1,12 +1,24 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
+  swagger_controller :users, 'Users'
 
   # GET /users or /users.json
+  swagger_api :index do
+    summary 'Returns all users'
+    notes 'Notes...'
+  end
+
+
   def index
     @users = User.all
   end
 
   # GET /users/1 or /users/1.json
+  swagger_api :show do
+    summary 'Returns one user'
+    param :path, :id, :integer, :required, "User id"
+    notes 'Notes...'
+  end
   def show
   end
 
@@ -20,6 +32,10 @@ class UsersController < ApplicationController
   end
 
   # POST /users or /users.json
+  swagger_api :create do
+    summary 'Create a user'
+    notes 'Notes...'
+  end
   def create
     @user = User.new(user_params)
   
@@ -36,6 +52,11 @@ class UsersController < ApplicationController
   end
 
   # PATCH/PUT /users/1 or /users/1.json
+  swagger_api :update do
+    summary 'Update a  user'
+    param :path, :id, :integer, :required, "User id"
+    notes 'Notes...'
+  end
   def update
     respond_to do |format|
       if @user.update(user_params)
@@ -49,6 +70,11 @@ class UsersController < ApplicationController
   end
 
   # DELETE /users/1 or /users/1.json
+  swagger_api :destroy do
+    summary 'Delete a user'
+    param :path, :id, :integer, :required, "User id"
+    notes 'Notes...'
+  end
   def destroy
     @user.destroy
     respond_to do |format|

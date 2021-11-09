@@ -1,12 +1,22 @@
 class StatisticsController < ApplicationController
   before_action :set_statistic, only: %i[ show edit update destroy ]
+  swagger_controller :statistics, 'Statistics'
 
   # GET /statistics or /statistics.json
+  swagger_api :index do
+    summary 'Returns all statistics'
+    notes 'Notes...'
+  end
   def index
     @statistics = Statistic.all
   end
 
   # GET /statistics/1 or /statistics/1.json
+  swagger_api :show do
+    summary 'Returns one  statistic'
+    param :path, :id, :integer, :required, "Statistic id"
+    notes 'Notes...'
+  end
   def show
   end
 
@@ -20,6 +30,10 @@ class StatisticsController < ApplicationController
   end
 
   # POST /statistics or /statistics.json
+  swagger_api :create do
+    summary 'Create a statistic'
+    notes 'Notes...'
+  end
   def create
     @statistic = Statistic.new(statistic_params)
 
@@ -35,6 +49,11 @@ class StatisticsController < ApplicationController
   end
 
   # PATCH/PUT /statistics/1 or /statistics/1.json
+  swagger_api :update do
+    summary 'Update a statistic'
+    param :path, :id, :integer, :required, "Statistic id"
+    notes 'Notes...'
+  end
   def update
     respond_to do |format|
       if @statistic.update(statistic_params)
@@ -48,6 +67,12 @@ class StatisticsController < ApplicationController
   end
 
   # DELETE /statistics/1 or /statistics/1.json
+
+  swagger_api :destroy do
+    summary 'Delete a statistic'
+    param :path, :id, :integer, :required, "Statistic id"
+    notes 'Notes...'
+  end
   def destroy
     @statistic.destroy
     respond_to do |format|

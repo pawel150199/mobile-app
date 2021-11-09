@@ -1,12 +1,22 @@
 class QuestionsController < ApplicationController
   before_action :set_question, only: %i[ show edit update destroy ]
+  swagger_controller :questions, 'Questions'
 
   # GET /questions or /questions.json
+  swagger_api :index do
+    summary 'Retturns all questions'
+    notes 'Notes...'
+  end
   def index
     @questions = Question.all
   end
 
   # GET /questions/1 or /questions/1.json
+  swagger_api :show do
+    summary 'Retturns one question'
+    param :path, :id, :integer, :required, "question id"
+    notes 'Notes...'
+  end
   def show
   end
 
@@ -20,6 +30,10 @@ class QuestionsController < ApplicationController
   end
 
   # POST /questions or /questions.json
+  swagger_api :create do
+    summary 'Create a  question'
+    notes 'Notes...'
+  end
   def create
     @question = Question.new(question_params)
 
@@ -35,6 +49,11 @@ class QuestionsController < ApplicationController
   end
 
   # PATCH/PUT /questions/1 or /questions/1.json
+  swagger_api :update do
+    summary 'Update a  question'
+    param :path, :id, :integer, :required, "question id"
+    notes 'Notes...'
+  end
   def update
     respond_to do |format|
       if @question.update(question_params)
@@ -48,6 +67,11 @@ class QuestionsController < ApplicationController
   end
 
   # DELETE /questions/1 or /questions/1.json
+  swagger_api :destroy do
+    summary 'Delete a  question'
+    param :path, :id, :integer, :required, "question id"
+    notes 'Notes...'
+  end
   def destroy
     @question.destroy
     respond_to do |format|

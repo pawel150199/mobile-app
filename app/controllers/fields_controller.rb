@@ -1,12 +1,22 @@
 class FieldsController < ApplicationController
   before_action :set_field, only: %i[ show edit update destroy ]
+  swagger_controller :fields, 'Fields'
 
   # GET /fields or /fields.json
+  swagger_api :index do
+    summary 'Returns all fields'
+    notes 'Notes...'
+  end
   def index
     @fields = Field.all
   end
 
   # GET /fields/1 or /fields/1.json
+  swagger_api :show do
+    summary 'return one field'
+    param :path, :id, :integer, :required, "field id"
+    notes 'Notes...'
+  end
   def show
   end
 
@@ -20,6 +30,10 @@ class FieldsController < ApplicationController
   end
 
   # POST /fields or /fields.json
+  swagger_api :create do
+    summary 'Create a field'
+    notes 'Notes...'
+  end
   def create
     @field = Field.new(field_params)
 
@@ -35,6 +49,11 @@ class FieldsController < ApplicationController
   end
 
   # PATCH/PUT /fields/1 or /fields/1.json
+  swagger_api :update do
+    summary 'Update a field'
+    param :path, :id, :integer, :required, "field id"
+    notes 'Notes...'
+  end
   def update
     respond_to do |format|
       if @field.update(field_params)
@@ -48,6 +67,11 @@ class FieldsController < ApplicationController
   end
 
   # DELETE /fields/1 or /fields/1.json
+  swagger_api :destroy do
+    summary 'Delete a field'
+    param :path, :id, :integer, :required, "field id"
+    notes 'Notes...'
+  end
   def destroy
     @field.destroy
     respond_to do |format|

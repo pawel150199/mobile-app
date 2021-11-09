@@ -1,12 +1,22 @@
 class AnswersController < ApplicationController
   before_action :set_answer, only: %i[ show edit update destroy ]
+  swagger_controller :answers, 'Answers'
 
   # GET /answers or /answers.json
+  swagger_api :index do
+    summary 'Returns all answers'
+    notes 'Notes...'
+  end
   def index
     @answers = Answer.all
   end
 
   # GET /answers/1 or /answers/1.json
+  swagger_api :create do
+    summary 'Return one answer'
+    param :path, :id, :integer, :required, "Answer id"
+    notes 'Notes...'
+  end
   def show
   end
 
@@ -20,6 +30,10 @@ class AnswersController < ApplicationController
   end
 
   # POST /answers or /answers.json
+  swagger_api :create do
+    summary 'Create an answer'
+    notes 'Notes...'
+  end
   def create
     @answer = Answer.new(answer_params)
 
@@ -35,6 +49,11 @@ class AnswersController < ApplicationController
   end
 
   # PATCH/PUT /answers/1 or /answers/1.json
+  swagger_api :update do
+    summary 'Update an answer'
+    param :path, :id, :integer, :required, "Answer id"
+    notes 'Notes...'
+  end
   def update
     respond_to do |format|
       if @answer.update(answer_params)
@@ -48,6 +67,11 @@ class AnswersController < ApplicationController
   end
 
   # DELETE /answers/1 or /answers/1.json
+  swagger_api :destroy do
+    summary 'Delete a answer'
+    param :path, :id, :integer, :required, "Answer id"
+    notes 'Notes...'
+  end
   def destroy
     @answer.destroy
     respond_to do |format|
