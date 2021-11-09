@@ -1,0 +1,20 @@
+{
+  "apiVersion": "2.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "static",
+  "apis": [
+    {
+      "path": "/",
+      "operations": [
+        {
+          "summary": "Shows a feed for authenticated used",
+          "notes": "Notes...",
+          "nickname": "Static#index",
+          "method": "get"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}

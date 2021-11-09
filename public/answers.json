@@ -1,0 +1,80 @@
+{
+  "apiVersion": "2.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "answers",
+  "apis": [
+    {
+      "path": "/answers",
+      "operations": [
+        {
+          "summary": "Returns all answers",
+          "notes": "Notes...",
+          "nickname": "Answers#index",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "path": "/answers",
+      "operations": [
+        {
+          "summary": [
+            "Return one answer",
+            "Create an answer"
+          ],
+          "notes": [
+            "Notes...",
+            "Notes..."
+          ],
+          "parameters": [
+
+          ],
+          "nickname": "Answers#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/answers/{id}",
+      "operations": [
+        {
+          "summary": "Update an answer",
+          "notes": "Notes...",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Answer id",
+              "required": true
+            }
+          ],
+          "nickname": "Answers#update",
+          "method": "patch"
+        }
+      ]
+    },
+    {
+      "path": "/answers/{id}",
+      "operations": [
+        {
+          "summary": "Delete a answer",
+          "notes": "Notes...",
+          "parameters": [
+            {
+              "paramType": "path",
+              "name": "id",
+              "type": "integer",
+              "description": "Answer id",
+              "required": true
+            }
+          ],
+          "nickname": "Answers#destroy",
+          "method": "delete"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}

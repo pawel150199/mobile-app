@@ -4,8 +4,32 @@
   "basePath": "http://localhost:3000",
   "apis": [
     {
+      "path": "/static.{format}",
+      "description": "Static"
+    },
+    {
+      "path": "/sessions.{format}",
+      "description": "Sessions"
+    },
+    {
+      "path": "/statistics.{format}",
+      "description": "Statistics"
+    },
+    {
       "path": "/users.{format}",
       "description": "Users"
+    },
+    {
+      "path": "/answers.{format}",
+      "description": "Answers"
+    },
+    {
+      "path": "/questions.{format}",
+      "description": "Questions"
+    },
+    {
+      "path": "/fields.{format}",
+      "description": "Fields"
     }
   ],
   "authorizations": null,

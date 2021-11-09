@@ -2,86 +2,86 @@
   "apiVersion": "2.0",
   "swaggerVersion": "1.2",
   "basePath": "http://localhost:3000",
-  "resourcePath": "users",
+  "resourcePath": "statistics",
   "apis": [
     {
-      "path": "/users",
+      "path": "/statistics",
       "operations": [
         {
-          "summary": "Returns all users",
+          "summary": "Returns all statistics",
           "notes": "Notes...",
-          "nickname": "Users#index",
+          "nickname": "Statistics#index",
           "method": "get"
         }
       ]
     },
     {
-      "path": "/users",
+      "path": "/statistics",
       "operations": [
         {
-          "summary": "Create a user",
+          "summary": "Create a statistic",
           "notes": "Notes...",
-          "nickname": "Users#create",
+          "nickname": "Statistics#create",
           "method": "post"
         }
       ]
     },
     {
-      "path": "/users/{id}",
+      "path": "/statistics/{id}",
       "operations": [
         {
-          "summary": "Returns one user",
+          "summary": "Returns one  statistic",
           "notes": "Notes...",
           "parameters": [
             {
               "paramType": "path",
               "name": "id",
               "type": "integer",
-              "description": "User id",
+              "description": "Statistic id",
               "required": true
             }
           ],
-          "nickname": "Users#show",
+          "nickname": "Statistics#show",
           "method": "get"
         }
       ]
     },
     {
-      "path": "/users/{id}",
+      "path": "/statistics/{id}",
       "operations": [
         {
-          "summary": "Update a  user",
+          "summary": "Update a statistic",
           "notes": "Notes...",
           "parameters": [
             {
               "paramType": "path",
               "name": "id",
               "type": "integer",
-              "description": "User id",
+              "description": "Statistic id",
               "required": true
             }
           ],
-          "nickname": "Users#update",
+          "nickname": "Statistics#update",
           "method": "patch"
         }
       ]
     },
     {
-      "path": "/users/{id}",
+      "path": "/statistics/{id}",
       "operations": [
         {
-          "summary": "Delete a user",
+          "summary": "Delete a statistic",
           "notes": "Notes...",
           "parameters": [
             {
               "paramType": "path",
               "name": "id",
               "type": "integer",
-              "description": "User id",
+              "description": "Statistic id",
               "required": true
             }
           ],
-          "nickname": "Users#destroy",
+          "nickname": "Statistics#destroy",
           "method": "delete"
         }
       ]

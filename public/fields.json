@@ -2,86 +2,86 @@
   "apiVersion": "2.0",
   "swaggerVersion": "1.2",
   "basePath": "http://localhost:3000",
-  "resourcePath": "users",
+  "resourcePath": "fields",
   "apis": [
     {
-      "path": "/users",
+      "path": "/fields",
       "operations": [
         {
-          "summary": "Returns all users",
+          "summary": "Returns all fields",
           "notes": "Notes...",
-          "nickname": "Users#index",
+          "nickname": "Fields#index",
           "method": "get"
         }
       ]
     },
     {
-      "path": "/users",
+      "path": "/fields",
       "operations": [
         {
-          "summary": "Create a user",
+          "summary": "Create a field",
           "notes": "Notes...",
-          "nickname": "Users#create",
+          "nickname": "Fields#create",
           "method": "post"
         }
       ]
     },
     {
-      "path": "/users/{id}",
+      "path": "/fields/{id}",
       "operations": [
         {
-          "summary": "Returns one user",
+          "summary": "return one field",
           "notes": "Notes...",
           "parameters": [
             {
               "paramType": "path",
               "name": "id",
               "type": "integer",
-              "description": "User id",
+              "description": "field id",
               "required": true
             }
           ],
-          "nickname": "Users#show",
+          "nickname": "Fields#show",
           "method": "get"
         }
       ]
     },
     {
-      "path": "/users/{id}",
+      "path": "/fields/{id}",
       "operations": [
         {
-          "summary": "Update a  user",
+          "summary": "Update a field",
           "notes": "Notes...",
           "parameters": [
             {
               "paramType": "path",
               "name": "id",
               "type": "integer",
-              "description": "User id",
+              "description": "field id",
               "required": true
             }
           ],
-          "nickname": "Users#update",
+          "nickname": "Fields#update",
           "method": "patch"
         }
       ]
     },
     {
-      "path": "/users/{id}",
+      "path": "/fields/{id}",
       "operations": [
         {
-          "summary": "Delete a user",
+          "summary": "Delete a field",
           "notes": "Notes...",
           "parameters": [
             {
               "paramType": "path",
               "name": "id",
               "type": "integer",
-              "description": "User id",
+              "description": "field id",
               "required": true
             }
           ],
-          "nickname": "Users#destroy",
+          "nickname": "Fields#destroy",
           "method": "delete"
         }
       ]

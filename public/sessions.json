@@ -1,0 +1,31 @@
+{
+  "apiVersion": "2.0",
+  "swaggerVersion": "1.2",
+  "basePath": "http://localhost:3000",
+  "resourcePath": "sessions",
+  "apis": [
+    {
+      "path": "/login",
+      "operations": [
+        {
+          "summary": "Login to user",
+          "notes": "Notes...",
+          "nickname": "Sessions#create",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "path": "/logout",
+      "operations": [
+        {
+          "summary": "Logout",
+          "notes": "Notes...",
+          "nickname": "Sessions#destroy",
+          "method": "delete"
+        }
+      ]
+    }
+  ],
+  "authorizations": null
+}

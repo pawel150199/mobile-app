@@ -2,86 +2,86 @@
   "apiVersion": "2.0",
   "swaggerVersion": "1.2",
   "basePath": "http://localhost:3000",
-  "resourcePath": "users",
+  "resourcePath": "questions",
   "apis": [
     {
-      "path": "/users",
+      "path": "/questions",
       "operations": [
         {
-          "summary": "Returns all users",
+          "summary": "Retturns all questions",
           "notes": "Notes...",
-          "nickname": "Users#index",
+          "nickname": "Questions#index",
           "method": "get"
         }
       ]
     },
     {
-      "path": "/users",
+      "path": "/questions",
       "operations": [
         {
-          "summary": "Create a user",
+          "summary": "Create a  question",
           "notes": "Notes...",
-          "nickname": "Users#create",
+          "nickname": "Questions#create",
           "method": "post"
         }
       ]
     },
     {
-      "path": "/users/{id}",
+      "path": "/questions/{id}",
       "operations": [
         {
-          "summary": "Returns one user",
+          "summary": "Retturns one question",
           "notes": "Notes...",
           "parameters": [
             {
               "paramType": "path",
               "name": "id",
               "type": "integer",
-              "description": "User id",
+              "description": "question id",
               "required": true
             }
           ],
-          "nickname": "Users#show",
+          "nickname": "Questions#show",
           "method": "get"
         }
       ]
     },
     {
-      "path": "/users/{id}",
+      "path": "/questions/{id}",
       "operations": [
         {
-          "summary": "Update a  user",
+          "summary": "Update a  question",
           "notes": "Notes...",
           "parameters": [
             {
               "paramType": "path",
               "name": "id",
               "type": "integer",
-              "description": "User id",
+              "description": "question id",
               "required": true
             }
           ],
-          "nickname": "Users#update",
+          "nickname": "Questions#update",
           "method": "patch"
         }
       ]
     },
     {
-      "path": "/users/{id}",
+      "path": "/questions/{id}",
       "operations": [
         {
-          "summary": "Delete a user",
+          "summary": "Delete a  question",
           "notes": "Notes...",
           "parameters": [
             {
               "paramType": "path",
               "name": "id",
               "type": "integer",
-              "description": "User id",
+              "description": "question id",
               "required": true
             }
           ],
-          "nickname": "Users#destroy",
+          "nickname": "Questions#destroy",
           "method": "delete"
         }
       ]
