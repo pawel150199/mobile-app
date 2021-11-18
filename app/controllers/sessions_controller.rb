@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   swagger_controller :sessions, 'Sessions'
+  skip_before_action :verify_authenticity_token
 
 
   def new
@@ -10,13 +11,27 @@ class SessionsController < ApplicationController
     notes 'Notes...'
   end
   def create
-    user = User.find_by(username: params[:session][:username])
-    if user && user.authenticate(params[:session][:password])
-      #Logowanie przebiegło poprawnie 
+    respond_to do |format|
+      user = User.find_by(username: params[:session][:username])
+      if user && user.authenticate(params[:session][:password])
+        format.html {
+          #Logowanie przebiegło poprawnie 
+          log_in user
+          redirect_to user
 
-    else
-      #Logowanie się nie udało
-      render 'new'
+        }
+        format.json {
+          render json: { message: 'Poprawne dane' }
+        }
+      else
+        format.html {
+          #Logowanie się nie udało
+          render 'new'
+        }
+        format.json {
+          render json: { message: 'Niepoprawne dane' }
+        }
+      end
     end
   end
 
