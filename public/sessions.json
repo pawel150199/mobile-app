@@ -10,6 +10,22 @@
         {
           "summary": "Login to user",
           "notes": "Notes...",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "session[username]",
+              "type": "string",
+              "description": "Username",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "session[password]",
+              "type": "string",
+              "description": "Password",
+              "required": true
+            }
+          ],
           "nickname": "Sessions#create",
           "method": "post"
         }

@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  swagger_controller :sessions, 'Sessions'
+  swagger_controller :session, 'Authentication'
   skip_before_action :verify_authenticity_token
 
 
@@ -8,6 +8,8 @@ class SessionsController < ApplicationController
 
   swagger_api :create do
     summary 'Login to user'
+    param :form, "session[username]", :string, :required, "Username"
+    param :form, "session[password]", :string, :required, "Password"
     notes 'Notes...'
   end
   def create
@@ -42,7 +44,18 @@ class SessionsController < ApplicationController
     notes 'Notes...'
   end
   def destroy
-    log_out
-    redirect_to root_url
+    respond_to do |format|
+      format.html do
+        log_out
+        redirect_to root_url
+      end
+      format.json do
+        require_token
+        if current_user
+          current_user.invalidate_token
+          head :ok
+        end
+      end
+    end
   end
 end

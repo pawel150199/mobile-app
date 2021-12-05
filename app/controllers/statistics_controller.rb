@@ -2,6 +2,7 @@ class StatisticsController < ApplicationController
   before_action :set_statistic, only: %i[ show edit update destroy ]
   swagger_controller :statistics, 'Statistics'
   skip_before_action :verify_authenticity_token
+  before_action :require_token, only: [:create]
 
   # GET /statistics or /statistics.json
   swagger_api :index do

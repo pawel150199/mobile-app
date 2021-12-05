@@ -9,7 +9,7 @@
     },
     {
       "path": "/sessions.{format}",
-      "description": "Sessions"
+      "description": "Authentication"
     },
     {
       "path": "/statistics.{format}",

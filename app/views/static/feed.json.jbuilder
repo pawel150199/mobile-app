@@ -1,1 +1,1 @@
-json.questions questions.answer
+json.array! @answers, partial: "answers/answer", as: :answer
