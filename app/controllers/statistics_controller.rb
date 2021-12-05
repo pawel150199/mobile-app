@@ -34,6 +34,7 @@ class StatisticsController < ApplicationController
   # POST /statistics or /statistics.json
   swagger_api :create do
     summary 'Create a statistic'
+    param :header, "Authorization", :string, :required, "Authentication token"
     param :form, "statistic[pointer]", :boolean, :required, "Pointer"
     param :form, "statistic[answer_id]", :string, :required, "Answer id"
     param :form, "statistic[question_id]", :string, :required, "Question id"

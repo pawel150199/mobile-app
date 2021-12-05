@@ -23,6 +23,13 @@
           "notes": "Notes...",
           "parameters": [
             {
+              "paramType": "header",
+              "name": "Authorization",
+              "type": "string",
+              "description": "Authentication token",
+              "required": true
+            },
+            {
               "paramType": "form",
               "name": "statistic[pointer]",
               "type": "boolean",
