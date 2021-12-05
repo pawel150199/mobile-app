@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
   swagger_controller :users, 'Users'
+  skip_before_action :verify_authenticity_token
 
   # GET /users or /users.json
   swagger_api :index do
@@ -34,6 +35,8 @@ class UsersController < ApplicationController
   # POST /users or /users.json
   swagger_api :create do
     summary 'Create a user'
+    param :form, "user[username]", :string, :required, "Username"
+    param :form, "user[password]", :string, :required, "Password"
     notes 'Notes...'
   end
   def create
@@ -55,6 +58,8 @@ class UsersController < ApplicationController
   swagger_api :update do
     summary 'Update a  user'
     param :path, :id, :integer, :required, "User id"
+    param :form, "user[username]", :string, :required, "Username"
+    param :form, "user[password]", :string, :required, "Password"
     notes 'Notes...'
   end
   def update

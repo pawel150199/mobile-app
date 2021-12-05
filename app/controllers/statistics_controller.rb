@@ -1,6 +1,7 @@
 class StatisticsController < ApplicationController
   before_action :set_statistic, only: %i[ show edit update destroy ]
   swagger_controller :statistics, 'Statistics'
+  skip_before_action :verify_authenticity_token
 
   # GET /statistics or /statistics.json
   swagger_api :index do
@@ -32,6 +33,10 @@ class StatisticsController < ApplicationController
   # POST /statistics or /statistics.json
   swagger_api :create do
     summary 'Create a statistic'
+    param :form, "statistic[pointer]", :boolean, :required, "Pointer"
+    param :form, "statistic[answer_id]", :string, :required, "Answer id"
+    param :form, "statistic[question_id]", :string, :required, "Question id"
+    param :form, "statistic[user_id]", :string, :required, "User id"
     notes 'Notes...'
   end
   def create
@@ -52,6 +57,10 @@ class StatisticsController < ApplicationController
   swagger_api :update do
     summary 'Update a statistic'
     param :path, :id, :integer, :required, "Statistic id"
+    param :form, "statistic[pointer]", :boolean, :required, "Pointer"
+    param :form, "statistic[answer_id]", :string, :required, "Answer id"
+    param :form, "statistic[question_id]", :string, :required, "Question id"
+    param :form, "statistic[user_id]", :string, :required, "User id"
     notes 'Notes...'
   end
   def update

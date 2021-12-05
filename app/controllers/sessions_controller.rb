@@ -21,7 +21,9 @@ class SessionsController < ApplicationController
 
         }
         format.json {
-          render json: { message: 'Poprawne dane' }
+          user.password = params[:session][:password]
+          user.regenerate_token
+          render json: { token: user.token}
         }
       else
         format.html {

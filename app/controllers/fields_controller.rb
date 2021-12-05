@@ -1,6 +1,7 @@
 class FieldsController < ApplicationController
   before_action :set_field, only: %i[ show edit update destroy ]
   swagger_controller :fields, 'Fields'
+  skip_before_action :verify_authenticity_token
 
   # GET /fields or /fields.json
   swagger_api :index do
@@ -32,6 +33,7 @@ class FieldsController < ApplicationController
   # POST /fields or /fields.json
   swagger_api :create do
     summary 'Create a field'
+    param :form, "field[name]", :string, :required, "Field name"
     notes 'Notes...'
   end
   def create
@@ -52,6 +54,7 @@ class FieldsController < ApplicationController
   swagger_api :update do
     summary 'Update a field'
     param :path, :id, :integer, :required, "field id"
+    param :form, "field[name]", :string, :required, "Field name"
     notes 'Notes...'
   end
   def update

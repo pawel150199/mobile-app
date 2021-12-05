@@ -28,7 +28,27 @@
             "Notes..."
           ],
           "parameters": [
-
+            {
+              "paramType": "form",
+              "name": "answer[answer]",
+              "type": "string",
+              "description": "Answer body",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "answer[is_correct]",
+              "type": "boolean",
+              "description": "Is correct?",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "answer[question_id]",
+              "type": "integer",
+              "description": "Question_id",
+              "required": true
+            }
           ],
           "nickname": "Answers#create",
           "method": "post"
@@ -47,6 +67,27 @@
               "name": "id",
               "type": "integer",
               "description": "Answer id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "answer[answer]",
+              "type": "string",
+              "description": "Answer body",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "answer[is_correct]",
+              "type": "boolean",
+              "description": "Is correct?",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "answer[question_id]",
+              "type": "integer",
+              "description": "Question_id",
               "required": true
             }
           ],

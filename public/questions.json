@@ -21,6 +21,22 @@
         {
           "summary": "Create a  question",
           "notes": "Notes...",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "question[question]",
+              "type": "string",
+              "description": "Question",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "question[field_id]",
+              "type": "integer",
+              "description": "Field id",
+              "required": true
+            }
+          ],
           "nickname": "Questions#create",
           "method": "post"
         }
@@ -58,6 +74,20 @@
               "name": "id",
               "type": "integer",
               "description": "question id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "question[question]",
+              "type": "string",
+              "description": "Question",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "question[field_id]",
+              "type": "integer",
+              "description": "Field id",
               "required": true
             }
           ],

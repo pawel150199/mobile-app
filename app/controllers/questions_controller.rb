@@ -1,6 +1,7 @@
 class QuestionsController < ApplicationController
   before_action :set_question, only: %i[ show edit update destroy ]
   swagger_controller :questions, 'Questions'
+  skip_before_action :verify_authenticity_token
 
   # GET /questions or /questions.json
   swagger_api :index do
@@ -32,6 +33,8 @@ class QuestionsController < ApplicationController
   # POST /questions or /questions.json
   swagger_api :create do
     summary 'Create a  question'
+    param :form, "question[question]", :string, :required, "Question"
+    param :form, "question[field_id]", :integer, :required, "Field id"
     notes 'Notes...'
   end
   def create
@@ -52,6 +55,8 @@ class QuestionsController < ApplicationController
   swagger_api :update do
     summary 'Update a  question'
     param :path, :id, :integer, :required, "question id"
+    param :form, "question[question]", :string, :required, "Question"
+    param :form, "question[field_id]", :integer, :required, "Field id"
     notes 'Notes...'
   end
   def update

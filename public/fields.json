@@ -21,6 +21,15 @@
         {
           "summary": "Create a field",
           "notes": "Notes...",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "field[name]",
+              "type": "string",
+              "description": "Field name",
+              "required": true
+            }
+          ],
           "nickname": "Fields#create",
           "method": "post"
         }
@@ -58,6 +67,13 @@
               "name": "id",
               "type": "integer",
               "description": "field id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "field[name]",
+              "type": "string",
+              "description": "Field name",
               "required": true
             }
           ],

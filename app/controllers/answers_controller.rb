@@ -1,6 +1,7 @@
 class AnswersController < ApplicationController
   before_action :set_answer, only: %i[ show edit update destroy ]
   swagger_controller :answers, 'Answers'
+  skip_before_action :verify_authenticity_token
 
   # GET /answers or /answers.json
   swagger_api :index do
@@ -32,6 +33,9 @@ class AnswersController < ApplicationController
   # POST /answers or /answers.json
   swagger_api :create do
     summary 'Create an answer'
+    param :form, "answer[answer]", :string, :required, "Answer body"
+    param :form, "answer[is_correct]", :boolean, :required, "Is correct?"
+    param :form, "answer[question_id]", :integer, :required, "Question_id"
     notes 'Notes...'
   end
   def create
@@ -52,6 +56,9 @@ class AnswersController < ApplicationController
   swagger_api :update do
     summary 'Update an answer'
     param :path, :id, :integer, :required, "Answer id"
+    param :form, "answer[answer]", :string, :required, "Answer body"
+    param :form, "answer[is_correct]", :boolean, :required, "Is correct?"
+    param :form, "answer[question_id]", :integer, :required, "Question_id"
     notes 'Notes...'
   end
   def update

@@ -1,0 +1,15 @@
+current directory: /Users/pawelpolski/testownik/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.3/ext/bootsnap
+/Users/pawelpolski/.rvm/rubies/ruby-3.0.2/bin/ruby -I /Users/pawelpolski/.rvm/rubies/ruby-3.0.2/lib/ruby/3.0.0 -r ./siteconf20211205-96008-jhro6a.rb extconf.rb
+creating Makefile
+
+current directory: /Users/pawelpolski/testownik/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.3/ext/bootsnap
+make DESTDIR\= clean
+
+current directory: /Users/pawelpolski/testownik/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.3/ext/bootsnap
+make DESTDIR\=
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/pawelpolski/testownik/vendor/bundle/ruby/3.0.0/gems/bootsnap-1.9.3/ext/bootsnap
+make DESTDIR\= install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20211205-96008-tejzmv/bootsnap

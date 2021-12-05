@@ -21,6 +21,22 @@
         {
           "summary": "Create a user",
           "notes": "Notes...",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "user[username]",
+              "type": "string",
+              "description": "Username",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "user[password]",
+              "type": "string",
+              "description": "Password",
+              "required": true
+            }
+          ],
           "nickname": "Users#create",
           "method": "post"
         }
@@ -58,6 +74,20 @@
               "name": "id",
               "type": "integer",
               "description": "User id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "user[username]",
+              "type": "string",
+              "description": "Username",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "user[password]",
+              "type": "string",
+              "description": "Password",
               "required": true
             }
           ],

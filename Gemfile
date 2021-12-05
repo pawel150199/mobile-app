@@ -57,5 +57,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rails-erd'
 gem 'bcrypt', '~> 3.1.7'
 gem 'swagger-docs'
-gem "sassc", "< 2.2.0"
+gem "sassc", "< 2.1.0"
 

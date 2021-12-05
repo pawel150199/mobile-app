@@ -21,6 +21,36 @@
         {
           "summary": "Create a statistic",
           "notes": "Notes...",
+          "parameters": [
+            {
+              "paramType": "form",
+              "name": "statistic[pointer]",
+              "type": "boolean",
+              "description": "Pointer",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "statistic[answer_id]",
+              "type": "string",
+              "description": "Answer id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "statistic[question_id]",
+              "type": "string",
+              "description": "Question id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "statistic[user_id]",
+              "type": "string",
+              "description": "User id",
+              "required": true
+            }
+          ],
           "nickname": "Statistics#create",
           "method": "post"
         }
@@ -58,6 +88,34 @@
               "name": "id",
               "type": "integer",
               "description": "Statistic id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "statistic[pointer]",
+              "type": "boolean",
+              "description": "Pointer",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "statistic[answer_id]",
+              "type": "string",
+              "description": "Answer id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "statistic[question_id]",
+              "type": "string",
+              "description": "Question id",
+              "required": true
+            },
+            {
+              "paramType": "form",
+              "name": "statistic[user_id]",
+              "type": "string",
+              "description": "User id",
               "required": true
             }
           ],
