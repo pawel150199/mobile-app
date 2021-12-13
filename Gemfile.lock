@@ -234,7 +234,7 @@ DEPENDENCIES
   sassc (< 2.1.0)
   selenium-webdriver
   spring
-  sqlite3 (~> 1.4)
+  sqlite3 (~> 1.4.2)
   swagger-docs
   turbolinks (~> 5)
   tzinfo-data
