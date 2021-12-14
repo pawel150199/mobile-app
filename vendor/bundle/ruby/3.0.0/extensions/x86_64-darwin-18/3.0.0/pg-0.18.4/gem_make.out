@@ -1,5 +1,5 @@
-current directory: /Users/pawelpolski/testownik/vendor/bundle/ruby/3.0.0/gems/pg-1.2.3/ext
-/Users/pawelpolski/.rvm/rubies/ruby-3.0.2/bin/ruby -I /Users/pawelpolski/.rvm/rubies/ruby-3.0.2/lib/ruby/3.0.0 -r ./siteconf20211214-7983-icwbqw.rb extconf.rb
+current directory: /Users/pawelpolski/testownik/vendor/bundle/ruby/3.0.0/gems/pg-0.18.4/ext
+/Users/pawelpolski/.rvm/rubies/ruby-3.0.2/bin/ruby -I /Users/pawelpolski/.rvm/rubies/ruby-3.0.2/lib/ruby/3.0.0 -r ./siteconf20211214-79004-3m81c7.rb extconf.rb
 checking for pg_config... no
 No pg_config... trying anyway. If building fails, please try again with
  --with-pg-config=/path/to/pg_config
@@ -39,6 +39,6 @@ Provided configuration options:
 
 To see why this extension failed to compile, please check the mkmf.log which can be found here:
 
-  /Users/pawelpolski/testownik/vendor/bundle/ruby/3.0.0/extensions/x86_64-darwin-18/3.0.0/pg-1.2.3/mkmf.log
+  /Users/pawelpolski/testownik/vendor/bundle/ruby/3.0.0/extensions/x86_64-darwin-18/3.0.0/pg-0.18.4/mkmf.log
 
 extconf failed, exit code 1
