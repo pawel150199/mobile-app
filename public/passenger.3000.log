@@ -1,0 +1,17 @@
+[ N 2022-01-04 18:50:44.2104 1248/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ N 2022-01-04 18:50:44.2304 1251/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2022-01-04 18:50:44.2316 1251/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ N 2022-01-04 18:50:44.2538 1251/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 1251
+[ N 2022-01-04 18:50:46.3365 1251/Tb age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+2022/01/04 18:50:46 [error] 1266#0: *4 "/home/ubuntu/testownik/public/public/index.html" is not found (2: No such file or directory), client: 127.0.0.1, server: _, request: "HEAD / HTTP/1.1", host: "0.0.0.0"
+2022/01/04 18:50:47 [error] 1266#0: *5 open() "/home/ubuntu/testownik/public/public/swagger/dist/index.html" failed (2: No such file or directory), client: 188.121.15.5, server: _, request: "GET /swagger/dist/index.html?url=/api-docs.json HTTP/1.1", host: "18.192.178.92:3000"
+2022/01/04 18:50:49 [error] 1266#0: *5 open() "/home/ubuntu/testownik/public/public/swagger/dist/index.html" failed (2: No such file or directory), client: 188.121.15.5, server: _, request: "GET /swagger/dist/index.html?url=/api-docs.json HTTP/1.1", host: "18.192.178.92:3000"
+2022/01/04 18:50:49 [error] 1266#0: *5 open() "/home/ubuntu/testownik/public/public/swagger/dist/index.html" failed (2: No such file or directory), client: 188.121.15.5, server: _, request: "GET /swagger/dist/index.html?url=/api-docs.json HTTP/1.1", host: "18.192.178.92:3000"
+
+[ N 2022-01-04 18:50:52.3105 1251/T5 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2022-01-04 18:50:52.3105 1251/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2022-01-04 18:50:52.3107 1251/T8 Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2022-01-04 18:50:52.3107 1251/T8 Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2022-01-04 18:50:52.3116 1251/T5 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2022-01-04 18:50:52.3116 1251/T5 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2022-01-04 18:50:52.3837 1251/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished

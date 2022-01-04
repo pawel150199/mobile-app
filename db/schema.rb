@@ -54,6 +54,7 @@ ActiveRecord::Schema.define(version: 2021_11_17_235206) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "password_digest"
     t.string "token"
+    t.index ["token"], name: "index_users_on_token"
     t.index ["username"], name: "index_users_on_username", unique: true
   end
 

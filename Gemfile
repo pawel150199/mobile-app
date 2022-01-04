@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.2'
+ruby '2.7.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
@@ -60,4 +60,4 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'swagger-docs'
 gem "sassc", "< 2.1.0"
 gem 'railroady'
-
+gem "passenger", ">= 5.3.2", require: "phusion_passenger/rack_handler"
