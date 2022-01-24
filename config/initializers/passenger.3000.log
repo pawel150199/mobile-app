@@ -1,0 +1,16 @@
+[ N 2022-01-10 14:06:57.5679 2403/T1 age/Wat/WatchdogMain.cpp:1373 ]: Starting Passenger watchdog...
+[ N 2022-01-10 14:06:57.5862 2406/T1 age/Cor/CoreMain.cpp:1340 ]: Starting Passenger core...
+[ N 2022-01-10 14:06:57.5863 2406/T1 age/Cor/CoreMain.cpp:256 ]: Passenger core running in multi-application mode.
+[ N 2022-01-10 14:06:57.5925 2406/T1 age/Cor/CoreMain.cpp:1015 ]: Passenger core online, PID 2406
+[ N 2022-01-10 14:06:59.6889 2406/T5 age/Cor/SecurityUpdateChecker.h:519 ]: Security update check: no update found (next check in 24 hours)
+2022/01/10 14:06:59 [error] 2417#0: *4 "/home/ubuntu/testownik/config/initializers/public/index.html" is not found (2: No such file or directory), client: 127.0.0.1, server: _, request: "HEAD / HTTP/1.1", host: "0.0.0.0"
+2022/01/10 14:07:03 [error] 2417#0: *5 open() "/home/ubuntu/testownik/config/initializers/public/swagger/dist/index.html" failed (2: No such file or directory), client: 31.60.60.84, server: _, request: "GET /swagger/dist/index.html?url=/api-docs.json HTTP/1.1", host: "3.69.151.94:3000", referrer: "http://3.69.151.94:3000/api"
+2022/01/10 14:07:04 [error] 2417#0: *5 open() "/home/ubuntu/testownik/config/initializers/public/swagger/dist/index.html" failed (2: No such file or directory), client: 31.60.60.84, server: _, request: "GET /swagger/dist/index.html?url=/api-docs.json HTTP/1.1", host: "3.69.151.94:3000", referrer: "http://3.69.151.94:3000/api"
+
+[ N 2022-01-10 14:07:07.0108 2406/T9 age/Cor/CoreMain.cpp:671 ]: Signal received. Gracefully shutting down... (send signal 2 more time(s) to force shutdown)
+[ N 2022-01-10 14:07:07.0108 2406/T1 age/Cor/CoreMain.cpp:1246 ]: Received command to shutdown gracefully. Waiting until all clients have disconnected...
+[ N 2022-01-10 14:07:07.0109 2406/Tb Ser/Server.h:902 ]: [ApiServer] Freed 0 spare client objects
+[ N 2022-01-10 14:07:07.0110 2406/Tb Ser/Server.h:558 ]: [ApiServer] Shutdown finished
+[ N 2022-01-10 14:07:07.0110 2406/T9 Ser/Server.h:902 ]: [ServerThr.1] Freed 0 spare client objects
+[ N 2022-01-10 14:07:07.0110 2406/T9 Ser/Server.h:558 ]: [ServerThr.1] Shutdown finished
+[ N 2022-01-10 14:07:07.0847 2406/T1 age/Cor/CoreMain.cpp:1325 ]: Passenger core shutdown finished

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MobileApp</title>
+    <title>StudAppp</title>
+    <link rel="icon" type="image/png" href="<%= asset_path('Studapp.png')%>" sizes="64x64">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -14,14 +15,16 @@
     
     }
     ul {
-      margin-top: 35vw;
-      margin-left: 45vw;
+      margin-top: 20vw;
+      margin-left: 40vw;
+      list-style: none;
       
     }
     li {
       color: white;
       text-decoration: none;
       margin-top: 2vw;
+      list-style: none;
 
     }
     a:link {
@@ -37,14 +40,7 @@
     <%= yield %>
 
 <ul>
-  <li><%= link_to "Uzytkownicy", users_path %></li>
-  <li><%= link_to "Statystyki", statistics_path %></li>
-  <% if logged_in? %>
-    <li><%= link_to current_user.username, current_user %></li>
-    <li><%= link_to "Wyloguj", logout_path, method: :delete %></li>
-  <% else %>
-    <li><%= link_to "Zaloguj", login_path %></li>
-  <% end %>
+  <li><%= link_to "Dokumentacja API", api_path %></li>
 </ul>
   </body>
 </html>

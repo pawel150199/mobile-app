@@ -8,4 +8,14 @@ class User < ApplicationRecord
     def invalidate_token
         self.update_columns(token: nil)
     end
+
+    def self.from_param(param)
+        find_by_username!(param)
+    end
+
+    def to_param
+        self.username
+    end
 end
+
+
