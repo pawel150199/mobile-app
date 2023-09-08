@@ -1,24 +1,7 @@
 # README
+This repository cover application was developed during course at my university called `mobile applications`.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Studapp is API for mobile application and implements test creation and doing test similar like for example in application `quizlet`.
+I deployed this application on AWS EC2 instance using passenger tool, but this repo doesn't cover this area.
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
